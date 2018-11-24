@@ -1,0 +1,51 @@
+html,body{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.h3{
+ position: absolute;
+ top: -15px;
+}
+
+.title{
+    position: relative;
+    width: 200px;
+    height: 60px;
+    border: 2px solid red;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    overflow: hidden;
+}
+
+.title span{
+    display: inline-block;
+    color: blue;
+    transition: 0.5s;
+}
+
+.title span:nth-child(odd){
+    transform: translateY(-100%);
+}
+.title span:nth-child(even){
+    transform: translateY(100%);
+}
+
+ .title span::before{
+    content: attr(data-text);
+    color: red;
+    position: absolute;
+}
+.title span:nth-child(odd)::before{
+    transform: translateY(100%);
+}
+.title span:nth-child(even)::before{
+    transform: translateY(-100%);
+} 
+.title:hover span {
+    transform: translateY(0);
+}

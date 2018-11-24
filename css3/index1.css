@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightskyblue;
+    overflow: hidden;
+}
+
+.pencile{
+    position: relative;
+    width: 25em;
+    height: 1.75em;
+    
+    filter: drop-shadow(2.5px 5px 1.5px gray);
+}
+
+.pencile .barrel{
+    position: absolute;
+    width: 20em;
+    left: 2em;
+    background-color: green;
+    border-top: 0.5em solid forestgreen;
+    border-bottom: 0.5em solid darkgreen;
+    line-height: 0.75em;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: silver;
+    text-align: center;
+}
+
+.pencile .taper::before,.pencile .taper::after{
+    content: '';
+    position: absolute;
+    left: -2em;
+    border-style: solid;
+    border-width: calc(1.75em/2)2em;
+}
+
+.pencile .taper::before{
+    border-color:  transparent burlywood transparent transparent;
+}
+
+.pencile .taper::after{
+    border-color:  transparent black transparent transparent;
+    transform: scale(0.3)
+}
+.pencile .eraser{
+    position: absolute;
+    right: 0;
+    width: 3em;
+    height: 0.75em;
+    background-color: lightpink;
+    border-top: 0.5em solid pink;
+    border-bottom: 0.5em solid lightcoral;
+    border-top-right-radius:0.25em; 
+    border-bottom-right-radius:0.25em;
+}
+
+.pencile .eraser::before{
+    content: '';
+    position: absolute;
+    top: -0.5em;
+    left: 0;
+    width: 0.75em;
+    height: 0.75em;
+    background-color: silver;
+    border-top: 0.5em solid lightgray;
+    border-bottom: 0.5em solid gray;
+}
+
+
