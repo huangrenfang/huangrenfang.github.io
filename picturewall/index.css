@@ -1,0 +1,46 @@
+.main{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* left:100px;
+    width: 1600px;
+    height: 1000px; */
+    border: 1px solid #f00;
+}
+.main img{
+    /* flex-grow: 1; */
+    width: 300px;
+    height: 300px;
+}
+.aone{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 50px;
+    left: 300px;
+    /* height: 30%; */
+    z-index: 1;
+}
+.atwo{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 350px;
+    left: 300px;
+    z-index: 1;
+}
+.athree{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 650px;
+    left: 300px;
+    z-index: 1;
+}
+.mask{
+    width: 2000px !important;
+    height: 1200px !important;
+    background-size: cover;
+    filter: blur(20px);
+}
