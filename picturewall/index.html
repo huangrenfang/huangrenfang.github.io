@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>帅玥胖胖 birthday present</title>
     <link rel="stylesheet" href="./index.css">
+    <script src="./jquery-3.3.1.min.js"></script>
+    <link rel="shortcut icon" href="./img/favicon.ico">
 </head>
 <body>
     <div class="main">
@@ -28,36 +30,96 @@
            
             <div class="athree">
                 <img src="./img/9.jpg" alt="" class="img9">
-                <img src="./img/10.jpg" alt="" class="im10"> 
+                <img src="./img/10.jpg" alt="" class="img10"> 
                 <img src="./img/11.jpg" alt="" class="img11">
                 <img src="./img/13.jpg" alt="" class="img12">
-            </div>
-            <img src="./img/10.jpg" alt="" class="mask">
+            </div> 
+            
     </div>
+    <img src="./img/main.jpg" alt="" class="shelike">
+    <img src="./img/2.jpg" alt="" class="mask">
     
 </body>
-<script >
-    var Oimg1=document.getElementsByTagName('img')[0];
-    var Oimg2=document.getElementsByTagName('img')[1];
-    var Oimg3=document.getElementsByTagName('img')[2];
-    var Oimg4=document.getElementsByTagName('img')[3];
-    var Orow1=document.getElementsByTagName('div')[0];
-    // Orow1.onmouseover=function(){
-    //     Oimg2.style.display="none";
-    //     Oimg3.style.display="none";
-    //     Oimg4.style.display="none";
+<script>
+    //封装淡出
+    function row1(){
+        $(".img1").fadeOut(1000);
+        $(".img2").fadeOut(2000);
+        $(".img3").fadeOut(3000);
+        $(".img4").fadeOut(4000);
+    }
+    function row2(){
+        $(".img5").fadeOut(5000);
+        $(".img6").fadeOut(6000);
+        $(".img7").fadeOut(7000);
+        $(".img8").fadeOut(8000);
+    }
+    function row3(){
+        $(".img9").fadeOut(9000);
+        $(".img10").fadeOut(10000);
+        $(".img11").fadeOut(11000);
+        $(".img12").fadeOut(12000);
+    }
+    //绑定淡出
+    $(".aone").mouseover(function(){
+        row1();
+        row2();
+        row3();
+        $(".shelike").fadeIn(13000);//主图片13秒后完全淡入
+    });
+    $(".atwo").mouseover(function(){
+        row1();
+        row2();
+        row3();
+        $(".shelike").fadeIn(13000);
+    });
+    $(".athree").mouseover(function(){
+        row1();
+        row2();
+        row3();
+        $(".shelike").fadeIn(13000);
+    })
+    
+    
+    //封装淡入
+    function row4(){
+        $(".img9").fadeIn(5000);
+        $(".img10").fadeIn(4000);
+        $(".img11").fadeIn(3000);
+        $(".img12").fadeIn(2000);
+    }
+    function row5(){
+        $(".img5").fadeIn(9000);
+        $(".img6").fadeIn(8000);
+        $(".img7").fadeIn(7000);
+        $(".img8").fadeIn(6000);
+    }
+    function row6(){
+        $(".img1").fadeIn(13000);
+        $(".img2").fadeIn(12000);
+        $(".img3").fadeIn(11000);
+        $(".img4").fadeIn(10000);
+    }
+    //绑定淡入
+    $(".aone").mouseout(function(){
+        row4();
+        row5();
+        row6();
+        $(".shelike").fadeOut();
+    })
+    $(".atwo").mouseout(function(){
+        row4();
+        row5();
+        row6();
+        $(".shelike").fadeOut();
+    })
+    $(".athree").mouseout(function(){
+        row4();
+        row5();
+        row6();
+        $(".shelike").fadeOut();
+    })
+    
 
-    // }
-    // Orow1.onmouseout=function(){
-    //     Oimg2.style.display="block";
-    //     Oimg3.style.display="block";
-    //     Oimg4.style.display="block";
-    // }
-    for(let i=0;i<Oimg.length;i++){
-        Oimg[i].onmouseover
-    }
-    Oimg.onclick=function(){
-        console.log(222);
-    }
 </script>
 </html>

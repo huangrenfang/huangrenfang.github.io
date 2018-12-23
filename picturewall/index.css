@@ -44,3 +44,12 @@
     background-size: cover;
     filter: blur(20px);
 }
+.shelike{
+    display: none;
+    width: 1300px;
+    height: 900px;
+    position: absolute;
+    top: 59px;
+    left: 225px;
+    z-index: 2;
+}
